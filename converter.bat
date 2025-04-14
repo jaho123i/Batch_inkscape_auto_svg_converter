@@ -6,6 +6,8 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
+mkdir 128p_pictures
+
 for %%f in (*.svg) do (
     for /f "delims=" %%W in ('inkscape --query-width "%%f"') do set "width=%%W"
     for /f "delims=" %%H in ('inkscape --query-height "%%f"') do set "height=%%H"
